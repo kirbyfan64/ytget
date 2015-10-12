@@ -15,6 +15,7 @@ window.prepare = ->
     title = result.title
     status.text "Loading formats for video '#{title}'"
     urls = $ '#urls'
+    urls.empty()
     urls.css 'visibility', 'visible'
     $.each result.formats, (_, fmt) ->
       return if !fmt.height

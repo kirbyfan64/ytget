@@ -18,6 +18,7 @@
       title = result.title;
       status.text("Loading formats for video '" + title + "'");
       urls = $('#urls');
+      urls.empty();
       urls.css('visibility', 'visible');
       $.each(result.formats, function(_, fmt) {
         var elem, ext, note;
