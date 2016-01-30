@@ -3,7 +3,7 @@ body {
     font-family: Arial, Sans-serif;
 }
 
-h1 { font-size: 10em; }
+h1 { font-size: 10vw; }
 .invisible { visibility: hidden; }
 #status { text-align: center; }
 #url { width: 50%; }
