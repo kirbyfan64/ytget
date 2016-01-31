@@ -31,6 +31,10 @@ window.prepare = ->
     $('#download').css 'visibility', 'visible'
 
 window.download_item = ->
+  dlink = $ '<a></a>'
   obj = JSON.parse $('#urls').val()
   console.log obj
-  downloadFile obj.url, obj.name
+  dlink.attr 'href', obj.url
+  dlink.attr 'download', obj.name # XXX: Why doesn't this do anything??
+  console.log dlink
+  dlink.get(0).click()

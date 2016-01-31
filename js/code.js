@@ -44,10 +44,14 @@
   };
 
   window.download_item = function() {
-    var obj;
+    var dlink, obj;
+    dlink = $('<a></a>');
     obj = JSON.parse($('#urls').val());
     console.log(obj);
-    return downloadFile(obj.url, obj.name);
+    dlink.attr('href', obj.url);
+    dlink.attr('download', obj.name);
+    console.log(dlink);
+    return dlink.get(0).click();
   };
 
 }).call(this);
